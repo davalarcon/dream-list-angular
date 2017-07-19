@@ -1,0 +1,16 @@
+h1{
+  font-size: 150px;
+  top: 10%
+}
+p{
+  font-size: 50px;
+  background-color: lightgray;
+}
+
+.carousel-caption{
+  top:10%
+}
+
+.carousel-inner{
+  height: 650px;
+}
