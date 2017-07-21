@@ -1,0 +1,30 @@
+.firstImage{
+  padding-top: 30px;
+  margin-left: -18px;
+  height: 942px;
+  position: absolute;
+  z-index: -1;
+}
+
+.form-horizontal{
+  margin-top: 150px;
+  width: 600px;
+  background-color: rgba(248,248,248, 0.8);
+  border-radius: 10px;
+  margin-left: 30px;
+  /*border: solid black;*/
+}
+
+.form-group{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.signin{
+  padding-bottom: 20px;
+}
+
+.signup{
+  margin-top: 100px;
+}
