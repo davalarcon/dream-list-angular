@@ -2,3 +2,8 @@
 body{
   background-color: MEDIUMSLATEBLUE;
 }
+.footer{
+  height: 80px;
+  background-color: gray;
+  margin-top: -50;
+}

@@ -1,6 +1,6 @@
 <div class="container-fluid top">
 
-    <img class="firstImage" src="assets/images/gift03.jpg" alt="...">
+    <img class="firstImage" src="assets/images/gift01.jpg" alt="...">
 
     <form class="form-horizontal">
       <h3>LOG IN</h3>
@@ -32,39 +32,41 @@
       </div>
     </form>
 
-    <form class="form-horizontal signup">
+    <form class="form-horizontal signup" (ngSubmit)='doSignUp()'>
       <h3>SIGN UP</h3>
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+        <label for="name-input" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Name">
+          <input type="text" class="form-control" id="name-input" placeholder="Name"
+            [(ngModel)]='nameValue' name='nameValue'>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Last Name</label>
+        <label for="lastName-input" class="col-sm-2 control-label">Last Name</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Last Name">
+          <input type="text" class="form-control" id="lastName-input" placeholder="Last Name"
+            [(ngModel)]='lastNameValue' name='lastNameValue'>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <label for="birthday-input" class="col-sm-2 control-label">BirthDate</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          <input type="date" class="form-control" id="birthday-input" placeholder=""
+            [(ngModel)]='birthdayValue' name='birthdayValue'>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <label for="email-input" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <input type="email" class="form-control" id="email-input" placeholder="Email"
+            [(ngModel)]='emailValue' name=emailValue>
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
+        <label for="password-input" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password-input" placeholder="Password"
+            [(ngModel)]='passwordValue' name=passwordValue>
         </div>
       </div>
       <div class="form-group signin">

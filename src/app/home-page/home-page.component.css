@@ -1,14 +1,27 @@
+.mainImage{
+  height: 650px
+}
+
 h1{
   font-size: 130px;
-  top: 10%
+  top: 10%;
+  font-family: geneva;
+  color: MEDIUMSEAGREEN;
+  background-color: rgba(248,248,248, 0.5);
+  border-radius: 10px;
 }
 p{
   font-size: 50px;
   background-color: lightgray;
+  border-radius: 10px;
 }
 
 .carousel-caption{
-  top:50%
+  top:20%
+}
+
+.mainTitle{
+  top: 20%;
 }
 
 .carousel-inner{
@@ -16,9 +29,13 @@ p{
 }
 
 .container-fluid{
-  height: 350px;
-  border: solid black;
+  /*height: 350px;
+  border: solid black;*/
   /*object-fit: scale-down;*/
+}
+
+.how{
+  height: 700px;
 }
 .col-sm-4{
   height: 300px;
@@ -31,4 +48,7 @@ p{
   padding-top: 30px;
   margin-left: -18px;
   height: 854px;
+}
+.down{
+  top: 50%;  
 }
