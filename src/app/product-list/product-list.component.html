@@ -1,0 +1,20 @@
+<section class="container">
+
+  <div class="container">
+
+    <ul>
+      <li *ngFor="let product of products">
+        <div class="col-sm-4">
+
+        <h2>Name: {{product.name}}</h2>
+        <h3>Price: {{product.salesPrice}}</h3>
+        <img src="{{product.mediumImage}}" alt="">
+      </div>
+
+      </li>
+    </ul>
+
+  </div>
+
+
+</section>

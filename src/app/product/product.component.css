@@ -1,5 +1,63 @@
+
+.mainImage{
+  height: 850px;
+  position: absolute;
+  z-index: -1;
+}
+body{
+  height: 850px;
+}
+.buttons{
+  height: 850px;
+  padding-top: 300px;
+}
+.btn-block{
+  font-size: 70px;
+}
 .firstImage{
   padding-top: 30px;
   margin-left: -18px;
-  height: 854px;
+  height: 1000px;
+  position: absolute;
+  z-index: -1;
+}
+
+.top{
+  height: 920px;
+}
+
+.form-horizontal{
+  margin-top: 400px;
+  height: 150px;
+  padding: 35px;
+  background-color: rgba(248,248,248, 0.8);
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h3{
+  padding: 10px 0 0 10px;
+}
+.error{
+  padding: 15px;
+  border: 2px solid crimson;
+  border-radius: 5px;
+  color: crimson;
+  margin: 0 15px 15px 15px;
+}
+
+#formGroupInputLarge{
+  height: 80px;
+  font-size: 50px;
+}
+
+#search{
+  font-size: 40px;
+}
+
+.btn-info{
+  height: 80px;
+  width: 150px;
+  font-size: 40px;
 }

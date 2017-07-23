@@ -2,18 +2,21 @@
 
     <img class="firstImage" src="assets/images/gift01.jpg" alt="...">
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" (ngSubmit)='doLogin()'>
       <h3>LOG IN</h3>
+      <p *ngIf="loginErrorMessage" class='error'>{{loginErrorMessage}}</p>
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <label for="login-email-input" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          <input type="email" class="form-control" id="login-email-input" placeholder="Email"
+                [(ngModel)]="loginEmail" name="loginEmail">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <label for="login-password-input" class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <input type="password" class="form-control" id="login-password-input" placeholder="Password"
+                [(ngModel)]="loginPassword" name="loginPassword">
         </div>
       </div>
       <div class="form-group">
@@ -34,11 +37,12 @@
 
     <form class="form-horizontal signup" (ngSubmit)='doSignUp()'>
       <h3>SIGN UP</h3>
+      <p *ngIf="errorMessage" class='error'>{{errorMessage}}</p>
       <div class="form-group">
         <label for="name-input" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="name-input" placeholder="Name"
-            [(ngModel)]='nameValue' name='nameValue'>
+          <input type="text" class="form-control" id="name-input" placeholder="First Name"
+            [(ngModel)]='firstNameValue' name='firstNameValue'>
         </div>
       </div>
       <div class="form-group">

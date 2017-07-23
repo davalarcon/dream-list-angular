@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { WalmartApiService } from '../services/walmart-api.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css'],
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css'],
   providers: [WalmartApiService],
 })
-export class ProductComponent implements OnInit {
+export class ProductListComponent implements OnInit {
 
   products: any = [
     {
@@ -33,6 +33,5 @@ export class ProductComponent implements OnInit {
     this.walmartApiService.getList(searchWord)
       .subscribe((theList)=> this.products = theList)
   }
-
 
 }

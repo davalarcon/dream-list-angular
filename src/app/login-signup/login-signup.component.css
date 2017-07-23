@@ -37,3 +37,10 @@
 h3{
   padding: 10px 0 0 10px;
 }
+.error{
+  padding: 15px;
+  border: 2px solid crimson;
+  border-radius: 5px;
+  color: crimson;
+  margin: 0 15px 15px 15px;
+}
