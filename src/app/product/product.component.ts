@@ -24,14 +24,23 @@ export class ProductComponent implements OnInit {
     }
   ]
 
+  searchWord= "";
+
   constructor(private walmartApiService: WalmartApiService) { }
 
   ngOnInit() {
   }
 
+  autoScrollTo(){
+    
+  }
+
   fetchList(searchWord){
     this.walmartApiService.getList(searchWord)
-      .subscribe((theList)=> this.products = theList)
+      .subscribe((theList)=> {
+        this.searchWord = '';
+        this.products = theList;
+      })
   }
 
 

@@ -64,6 +64,7 @@ export class LoginSignupComponent implements OnInit {
   } // close doSignUp
 
   doLogin(){
+    console.log(this.loginEmail, this.loginPassword)
     this.authThang.login(this.loginEmail, this.loginPassword)
       .then((resultFromApi)=>{
         this.loginEmail = '';

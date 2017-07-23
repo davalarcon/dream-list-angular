@@ -17,17 +17,17 @@ body{
 .firstImage{
   padding-top: 30px;
   margin-left: -18px;
-  height: 1000px;
+  height: 900px;
   position: absolute;
   z-index: -1;
 }
 
 .top{
-  height: 920px;
+  height: 1000px;
 }
 
 .form-horizontal{
-  margin-top: 400px;
+  margin-top: 350px;
   height: 150px;
   padding: 35px;
   background-color: rgba(248,248,248, 0.8);
