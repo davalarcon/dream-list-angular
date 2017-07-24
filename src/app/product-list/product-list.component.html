@@ -1,23 +1,29 @@
-<section class="container">
+<section>
+  <div *ngFor="let product of productResults" class="container marketing" >
 
-  <div class="container">
+    <hr class="featurette-divider">
 
-    <ul>
-      <li *ngFor="let product of products">
-        <div class="col-sm-4">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette heading">{{product.name}}</h2>
+          <p class="lead">Sku: {{product.sku}}</p>
+          <p class="lead">Price: {{product.salePrice}}</p>
+          <p class="lead">Decription: {{product.longDescription}}</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="{{product.image}}" alt="" data-holder-rendered="true">
+        </div>
 
-        <h2>Name: {{product.name}}</h2>
-        <h3>Price: {{product.salesPrice}}</h3>
-        <img src="{{product.mediumImage}}" alt="">
+
+        <button type="button" class="btn btn-primary btn-lg btn-block dreamList">ADD TO MY <img class="imgButton" src="assets/images/dream_logo_crop.png" alt="..."/></button>
+
+
       </div>
-
-      </li>
-    </ul>
-
   </div>
-
+    <hr class="featurette-divider">
 
 </section>
+
 
 
 <div class="container marketing">

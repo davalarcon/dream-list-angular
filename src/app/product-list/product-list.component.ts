@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WalmartApiService } from '../services/walmart-api.service';
+import { ProductComponent } from '../product/product.component';
+import { Router } from '@angular/router'; //to redirect once we are sign up
 
 @Component({
   selector: 'app-product-list',
@@ -24,14 +26,26 @@ export class ProductListComponent implements OnInit {
     }
   ]
 
-  constructor(private walmartApiService: WalmartApiService) { }
+  productResults = [];
+
+  searchWord= "";
+
+  constructor(
+    private walmartApiService: WalmartApiService,
+    private routerThang: Router, //to redirect once we are sign up
+  ) { }
 
   ngOnInit() {
   }
 
   fetchList(searchWord){
     this.walmartApiService.getList(searchWord)
-      .subscribe((theList)=> this.products = theList)
+      .subscribe((theList)=> {
+        console.log(theList);
+        this.productResults = theList.products;
+        this.routerThang.navigate(['/product-list']);
+        console.log(this.productResults);
+      })
   }
 
 }

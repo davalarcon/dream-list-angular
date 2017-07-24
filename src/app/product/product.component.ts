@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WalmartApiService } from '../services/walmart-api.service';
+import { Router } from '@angular/router'; //to redirect once we are sign up
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -11,6 +13,7 @@ export class ProductComponent implements OnInit {
 
   products: any = [
     {
+      sku: 'TheSku',
       name: 'TheName',
       salesPrice: 'ThePrice',
       itemId: 'TheId',
@@ -20,13 +23,19 @@ export class ProductComponent implements OnInit {
       customerRating: 'TheRating',
       numReviews: 'TheNumReviews',
       stock: 'TheStock',
-      shortDescription: 'TheShortDescription',
+      longDescription: 'TheLongDescription',
     }
-  ]
+  ];
+
+  productResults = [];
 
   searchWord= "";
 
-  constructor(private walmartApiService: WalmartApiService) { }
+  constructor(
+    private walmartApiService: WalmartApiService,
+    private routerThang: Router, //to redirect once we are sign up
+    private productThang: ProductService
+  ) { }
 
   ngOnInit() {
   }
@@ -38,9 +47,14 @@ export class ProductComponent implements OnInit {
   fetchList(searchWord){
     this.walmartApiService.getList(searchWord)
       .subscribe((theList)=> {
-        this.searchWord = '';
-        this.products = theList;
+        console.log(theList);
+        this.productResults = theList.products;
+        console.log(this.productResults);
       })
+  }
+
+  createGift(){
+    this.productThang.newGift()
   }
 
 

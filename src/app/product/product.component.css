@@ -7,6 +7,14 @@
 body{
   height: 850px;
 }
+.btn-info{
+  height: 80px;
+  width: 150px;
+  font-size: 40px;
+}
+.btn-lg{
+  padding: 0px;
+}
 .buttons{
   height: 850px;
   padding-top: 300px;
@@ -20,6 +28,17 @@ body{
   height: 900px;
   position: absolute;
   z-index: -1;
+}
+.secondImage{
+  padding-top: 30px;
+  margin-left: -18px;
+  height: 1010px;
+  position: absolute;
+  z-index: -1;
+}
+
+.featurette-divider{
+  border-top: 2px solid black;
 }
 
 .top{
@@ -36,6 +55,21 @@ body{
   margin-right: 100px;
 }
 
+.createGift{
+  margin-top: 150px;
+  height: 630px;
+  padding: 35px;
+  background-color: rgba(248,248,248, 0.8);
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.productResults{
+  border: solid black;
+}
+.productTitle{
+  font-size: 20px;
+}
 h3{
   padding: 10px 0 0 10px;
 }
@@ -56,8 +90,17 @@ h3{
   font-size: 40px;
 }
 
-.btn-info{
+
+.dreamList{
+  font-size: 50px;
+}
+.createDreamList{
+  font-size: 50px;
+  width: 500px;
+}
+.imgButton{
   height: 80px;
-  width: 150px;
-  font-size: 40px;
+}
+#resultsSection{
+  height: 500px;
 }

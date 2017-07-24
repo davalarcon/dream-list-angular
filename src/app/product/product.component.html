@@ -19,7 +19,7 @@
 
   </div>
   <div class="col-sm-8">
-      <a type="button" class="btn btn-primary btn-lg btn-block" onClick="document.getElementById('searchSection').scrollIntoView('searchSection')">Search for your Gift</a>
+      <a type="button" class="btn btn-success btn-lg btn-block" onClick="document.getElementById('searchSection').scrollIntoView('searchSection')">Search for your Gift</a>
 
     <a type="button" class="btn btn-default btn-lg btn-block">Create your Gift</a>
     </div>
@@ -37,7 +37,7 @@
 
 
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" (ngSubmit)='fetchList()'>
   <div class="form-group form-group-lg">
     <label class="col-sm-2 control-label" id="search" for="formGroupInputLarge">Search:</label>
     <div class="col-sm-8">
@@ -46,7 +46,7 @@
 
     </div>
     <div class="col-sm-2">
-        <button type="button" class="btn btn-info" (click)='fetchList(searchWord)'>find it</button>
+        <button type="button" class="btn btn-info" onClick="document.getElementById('resultsSection').scrollIntoView('resultsSection')" (click)='fetchList(searchWord)'>find it</button>
     </div>
   </div>
 
@@ -54,24 +54,97 @@
 
 </div>
 
+<!-- CREATE YOUR GIFT SECTION -->
 
-<section class="container">
+<div class="container-fluid top" id="searchSection">
 
-  <div class="container">
+    <img class="secondImage" src="assets/images/present.jpg" alt="...">
 
-    <ul>
-      <li *ngFor="let product of products">
-        <div class="col-sm-4">
 
-        <h2>Name: {{product.name}}</h2>
-        <h3>Price: {{product.salesPrice}}</h3>
-        <img src="{{product.mediumImage}}" alt="">
-      </div>
 
-      </li>
-    </ul>
+
+    <form class="form-horizontal createGift" (ngSubmit)="createGift()">
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" id="search" for="product-name-input">Name:</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" id="product-name-input"id="formGroupInputLarge" placeholder="Name of your gift"
+              [(ngModel)]='giftName' name="giftName">
+
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" id="search" for="product-name-input">Type:</label>
+      <div class="col-sm-9">
+      <select class="form-control" name="giftType" id="formGroupInputLarge" [(ngModel)]="giftType">
+        <option value="NON">Select</option>
+        <option value="Trip">Trip</option>
+        <option value="Good">Good</option>
+      </select>
+
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" id="search" for="product-price-input">Price:</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" id="product-price-input"id="formGroupInputLarge" placeholder="Price of your gift"
+               [(ngModel)]="giftPrice" name="giftPrice">
+
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" id="search" for="product-description-input">Descript:</label>
+      <div class="col-sm-9">
+        <textarea class="form-control" type="text" id="product-description-input"id="formGroupInputLarge" placeholder="In a few words describe your gift"
+              [(ngModel)]='giftDescription'  name="giftDescription"></textarea>
+
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" id="search" for="product-description-input">Img Url:</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" id="product-description-input"id="formGroupInputLarge" placeholder="Insert Image Url"
+              [(ngModel)]='giftImage' name="giftImage">
+
+    </div>
+  </div>
+  <div class="col-sm-2">
 
   </div>
+  <div class="col-sm-8">
+    <button type="button" class="btn btn-info btn-lg btn-block createDreamList" (click)='createGift()'>Create<img class="imgButton" src="assets/images/dream_logo_crop.png" alt="..."/></button>
+  </div>
 
+</form>
+
+</div>
+
+<!-- RESULTS SECTION -->
+<div id="resultsSection">
+
+</div>
+
+<section>
+  <div *ngFor="let product of productResults" class="container marketing" >
+
+    <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette heading">{{product.name}}</h2>
+          <p class="lead">Sku: {{product.sku}}</p>
+          <p class="lead">Price: {{product.salePrice}}</p>
+          <p class="lead">Decription: {{product.longDescription}}</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="{{product.image}}" alt="" data-holder-rendered="true">
+        </div>
+
+
+        <button type="button" class="btn btn-primary btn-lg btn-block dreamList">ADD TO MY <img class="imgButton" src="assets/images/dream_logo_crop.png" alt="..."/></button>
+
+
+      </div>
+  </div>
+    <hr class="featurette-divider">
 
 </section>
