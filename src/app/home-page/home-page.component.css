@@ -4,26 +4,40 @@
 }
 
 h1{
-  font-size: 130px;
+  font-size: 150px;
   top: 10%;
-  font-family: geneva;
-  color: MEDIUMSEAGREEN;
-  background-color: rgba(248,248,248, 1);
+  font-family: CenturyGothic;
+  color: black;
+  /*background-color: rgba(248,248,248, 1);*/
   border-radius: 10px;
 }
 p{
-  font-size: 50px;
-  background-color: rgba(248,248,248, 1);
+  font-size: 30px;
+  /*background-color: rgba(248,248,248, 1);*/
   border-radius: 10px;
   color: black;
+  font-family: CenturyGothic;
+}
+
+.marketing{
+  margin-bottom: 20px;
 }
 
 .carousel-caption{
   top:20%
 }
 
+hr{
+  border-top: 1px solid black;
+}
+.mainlogo{
+  height: 500px;
+}
 .mainTitle{
-  top: 20%;
+  top: 10%;
+}
+.center-block{
+  border-radius: 10px;
 }
 
 .carousel-inner{

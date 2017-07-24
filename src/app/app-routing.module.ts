@@ -6,6 +6,7 @@ import { ProductComponent } from './product/product.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'home2',
     component: CoverComponent
+  },
+  {
+    path: 'logout',
+    component: NavbarComponent
   }
 ];
 

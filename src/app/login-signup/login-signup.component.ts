@@ -33,7 +33,7 @@ export class LoginSignupComponent implements OnInit {
     this.authThang.checklogin()
   //if success, we are logged in.
     .then((resultFromApi)=>{
-        this.routerThang.navigate(['/home']);
+        this.routerThang.navigate(['/product']);
     })
 
     .catch((err)=>{
@@ -52,7 +52,7 @@ export class LoginSignupComponent implements OnInit {
           this.passwordValue = '';
           this.errorMessage = '';
           // rediret to camels page
-          this.routerThang.navigate(['/home']);
+          this.routerThang.navigate(['/product']);
         // alert('Sign up worked '+ resultFromApi._id);
       })
       .catch((err)=>{
@@ -72,7 +72,7 @@ export class LoginSignupComponent implements OnInit {
 
         this.loginErrorMessage = '';
 
-        this.routerThang.navigate(['/home'])
+        this.routerThang.navigate(['/product'])
       })
       .catch((err)=>{
         console.log('im in here')

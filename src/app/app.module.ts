@@ -16,6 +16,7 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { WalmartApiService } from './services/walmart-api.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CoverComponent } from './cover/cover.component';
     ProductComponent,
     LoginSignupComponent,
     ProductListComponent,
-    CoverComponent
+    CoverComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

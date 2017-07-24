@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
   }
 
   autoScrollTo(){
-    
+
   }
 
   fetchList(searchWord){

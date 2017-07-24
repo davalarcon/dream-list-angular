@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { LoginSignupService } from '../services/login-signup.service';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
   logoutError: string;
 
