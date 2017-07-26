@@ -3,6 +3,8 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
 
+import { environment } from '../../environments/environment';
+
 @Injectable()
 export class ProductService {
 
@@ -13,7 +15,7 @@ export class ProductService {
   newGift(theName, theType, thePrice, theDescription, theImage){
     return this.httpThang
       .post(
-        'http://localhost:3000/api/products',
+        environment.apiBase + '/api/products',
         {
           giftName: theName,
           giftType: theType,
@@ -31,7 +33,7 @@ export class ProductService {
   giftFromBB(theName, theSku, thePrice, theDescription, theImage){
     return this.httpThang
       .post(
-        'http://localhost:3000/api/products',
+        environment.apiBase + '/api/products',
         {
           giftName: theName,
           giftSku: theSku,
@@ -42,6 +44,17 @@ export class ProductService {
         {
           withCredentials: true
         }
+      )
+      .map(res=>res.json());
+  }
+
+
+  usersProducts(){
+    console.log('Im in usersProducts')
+    return this.httpThang
+      .get(
+        environment.apiBase + '/api/products',
+        { withCredentials: true }
       )
       .map(res=>res.json());
   }

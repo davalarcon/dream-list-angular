@@ -12,6 +12,9 @@ import { LoginSignupService } from '../services/login-signup.service';
 export class UsersPageComponent implements OnInit {
 
   currentUser : any = {};
+  giftArray: any[] = [];
+
+  userGiftError: string;
 
   constructor(
     private routerThang: Router, //to redirect once we are sign up
@@ -27,6 +30,19 @@ export class UsersPageComponent implements OnInit {
     .catch(()=>{
       this.routerThang.navigate(['/login-signup'])
     })
+  }
+
+
+  popupateGifts(){
+    console.log('Im in populateGifts')
+    this.productThang.usersProducts()
+      .subscribe((usersGifts)=>{
+        this.giftArray = usersGifts;
+      },
+      ()=>{
+        this.userGiftError = " Sorry, not gifts selected...yet 😉"
+      }
+    )
   }
 
 }

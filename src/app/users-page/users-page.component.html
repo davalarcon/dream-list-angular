@@ -25,3 +25,22 @@
   </div>
 
 </div>
+
+<section class="giftList">
+  <h2>gifts list</h2>
+  <p *ngIf= 'userGiftError' class="error">
+    {{userGiftError}}
+  </p>
+
+  <ul>
+    <li *ngFor="let oneGift of giftArray">
+      <h3>{{oneGift.name}}</h3>
+      <h4>{{oneGift.price}}</h4>
+      <p>{{oneGift.description}}</p>
+      <img [src]="oneGift.image" alt="">
+
+    </li>
+
+  </ul>
+
+</section>
