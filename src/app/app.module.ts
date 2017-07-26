@@ -6,7 +6,8 @@ import { FormsModule} from '@angular/forms';
 
 import { AuthService } from './services/auth.service';
 import { ProductService } from './services/product.service';
-import { LoginSignupService } from './services/login-signup.service'
+import { LoginSignupService } from './services/login-signup.service';
+// import { FileSelectDirective } from 'ng2-file-upload'; //after adding the npm package: npm install ng2-file-upload --save
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { WalmartApiService } from './services/walmart-api.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UsersPageComponent } from './users-page/users-page.component';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +29,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginSignupComponent,
     ProductListComponent,
     CoverComponent,
-    NavbarComponent
+    NavbarComponent,
+    UsersPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    // FileSelectDirective, // add this to upload images
   ],
   providers: [
     LoginSignupService,

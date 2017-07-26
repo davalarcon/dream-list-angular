@@ -1,0 +1,9 @@
+.mainImage{
+  height: 850px;
+  position: absolute;
+  z-index: -1;
+}
+.usersProfile{
+  position: absolute;
+  margin: 150px;
+}

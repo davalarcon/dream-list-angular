@@ -7,6 +7,7 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UsersPageComponent } from './users-page/users-page.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'logout',
     component: NavbarComponent
+  },
+  {
+    path: 'users-page',
+    component: UsersPageComponent
   }
 ];
 

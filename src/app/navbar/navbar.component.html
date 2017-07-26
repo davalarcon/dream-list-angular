@@ -7,8 +7,8 @@
       <img src="assets/images/clouds.jpg" alt="...">
       <div class="carousel-caption mainTitle">
         <img class="mainlogo" src="assets/images/dream_logo.png" alt="">
-        <h1>are you sure you want to log out?</h1>
-        <button type="button" (click)='logMeOutPls()' class="btn btn-primary btn-lg btn-block">LOG ME OUT</button>
+        <h1>{{currentUser.firstName}}, are you sure <br> you want to log out?</h1>
+        <button type="button" (click)='logMeOutPls()' class="btn btn-primary btn-lg btn-block">Yes, log me out</button>
 
       </div>
 

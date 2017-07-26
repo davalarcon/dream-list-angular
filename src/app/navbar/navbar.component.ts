@@ -10,6 +10,8 @@ import { LoginSignupService } from '../services/login-signup.service';
 })
 export class NavbarComponent implements OnInit {
 
+  currentUser : any =[]
+
   logoutError: string;
 
   constructor(
@@ -18,6 +20,13 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.authThang.checklogin()
+    .then((userFromApi)=>{
+      this.currentUser = userFromApi;
+    })
+    .catch(()=>{
+      this.routerThang.navigate(['/home'])
+    })
   }
 
   logMeOutPls(){

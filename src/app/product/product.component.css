@@ -7,6 +7,11 @@
 body{
   height: 850px;
 }
+.greeting{
+  font-size: 40px;
+  font-family: helvetica;
+  color: honeydew;
+}
 .btn-info{
   height: 80px;
   width: 150px;
@@ -102,5 +107,16 @@ h3{
   height: 80px;
 }
 #resultsSection{
+
+}
+.bottom{
   height: 500px;
+}
+.backButtonDiv{
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.backButton{
+  padding: 10px;
 }

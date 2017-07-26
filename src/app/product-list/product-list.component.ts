@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WalmartApiService } from '../services/walmart-api.service';
 import { ProductComponent } from '../product/product.component';
 import { Router } from '@angular/router'; //to redirect once we are sign up
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -14,15 +15,16 @@ export class ProductListComponent implements OnInit {
   products: any = [
     {
       name: 'TheName',
-      salesPrice: 'ThePrice',
+      salePrice: 'ThePrice',
+      sku: 'TheSku',
       itemId: 'TheId',
       categoryPath: 'TheCategory',
-      mediumImage: 'TheImage',
+      largeImage: 'TheImage',
       modelNumber: 'TheModel',
       customerRating: 'TheRating',
       numReviews: 'TheNumReviews',
       stock: 'TheStock',
-      shortDescription: 'TheShortDescription',
+      longDescription: 'TheShortDescription',
     }
   ]
 
@@ -30,12 +32,16 @@ export class ProductListComponent implements OnInit {
 
   searchWord= "";
 
+
   constructor(
     private walmartApiService: WalmartApiService,
-    private routerThang: Router, //to redirect once we are sign up
+    private routerThang: ActivatedRoute,
   ) { }
 
   ngOnInit() {
+    this.routerThang.params.subscribe((actualParams)=>{
+      this.searchWord = actualParams.searchWord
+    })
   }
 
   fetchList(searchWord){
@@ -43,7 +49,6 @@ export class ProductListComponent implements OnInit {
       .subscribe((theList)=> {
         console.log(theList);
         this.productResults = theList.products;
-        this.routerThang.navigate(['/product-list']);
         console.log(this.productResults);
       })
   }
