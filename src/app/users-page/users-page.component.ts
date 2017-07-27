@@ -26,6 +26,7 @@ export class UsersPageComponent implements OnInit {
     this.authThang.checklogin()
     .then((userFromApi)=>{
       this.currentUser = userFromApi;
+      console.log(this.currentUser);
     })
     .catch(()=>{
       this.routerThang.navigate(['/login-signup'])
@@ -38,9 +39,12 @@ export class UsersPageComponent implements OnInit {
         this.userGiftError = " Sorry, not gifts selected...yet 😉"
       }
     )
+
+
+
   }
 
 
-  
+
 
 }

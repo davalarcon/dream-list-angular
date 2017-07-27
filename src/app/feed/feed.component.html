@@ -26,16 +26,54 @@
 
 
 <section class="bottom">
-  <div *ngFor="let oneGift of giftArray" id="resultsSection" class="container marketing" >
+  <div *ngFor="let oneGift of giftArray, let i = index" id="resultsSection" class="container marketing" >
 
     <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
+
+          <h2>posted by: </h2>
+            <h3>{{oneGift.ownerId}}</h3>
+            <!-- <b *ngIf='oneGift.ownerId !== currentUser.Id'> {{oneGift.user.firstName}}</b> -->
+            <!-- <b *ngIf='oneGift.ownerId ===currentUser.ownerId'>YOU!</b> -->
+
           <h2 class="featurette heading">{{oneGift.name}}</h2>
           <h2 class="featurette heading">Price: ${{oneGift.price}}</h2>
           <p class="lead">Sku: {{oneGift.sku}}</p>
           <p class="lead">Decription: {{oneGift.description}}</p>
+          <h3>contributions: ${{oneGift.totalContribution}}</h3>
+          <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: porcentageOfContributions + '%'}">
+                <span class="sr-only"></span>{{oneGift.totalContribution}}%
+              </div>
+            </div>
+            <button *ngIf='!isShowingForm' type="button" class="btn btn-primary btn-lg btn-block" (click)='showContributionForm()'>
+              CONTRIBUTE TO MY FRIEND</button>
+
+            <div *ngIf='isShowingForm' >
+
+              <form (ngSubmit)='saveNewContribution(i)'>
+                  <div class="form-group">
+                    <label for="credit-card-number-input">Credit Card Number</label>
+                    <input type="number" class="form-control" id="credit-card-number-input" placeholder=""
+                              [(ngModel)]='creditCardNumber' name="creditCardNumber">
+                  </div>
+                  <div class="form-group">
+                    <label for="gift-amount-input">Gift Amount:</label>
+                    <input type="number" class="form-control" id="gift-amount-input" placeholder="$"
+                              [(ngModel)]='contributionAmount' name="contrubutionAmount">
+                  </div>
+
+
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+
+            </div>
+
+
+
+
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="{{oneGift.image}}"  alt="" data-holder-rendered="true">

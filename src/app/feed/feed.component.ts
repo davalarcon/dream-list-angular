@@ -12,9 +12,22 @@ import { LoginSignupService } from '../services/login-signup.service';
 export class FeedComponent implements OnInit {
 
   currentUser : any = {};
+  ownerId: any = {};
   giftArray: any[] = [];
 
+  oneGift: any;
+
   userGiftError: string;
+
+  isShowingForm: boolean = false;
+
+  contributionAmount: number;
+
+  price: number;
+
+  newAmount: number;
+
+  porcentageOfContributions: number;
 
   constructor(
     private routerThang: Router, //to redirect once we are sign up
@@ -23,6 +36,7 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.currentUser.firstName+"blaaaaah");
     this.authThang.checklogin()
     .then((userFromApi)=>{
       this.currentUser = userFromApi;
@@ -33,23 +47,47 @@ export class FeedComponent implements OnInit {
     this.productThang.feedProducts()
       .subscribe((usersGifts)=>{
         this.giftArray = usersGifts;
+        console.log(this.ownerId.firstName)
       },
       ()=>{
         this.userGiftError = " Sorry, not gifts selected...yet 😉"
       }
     )
+    
+
+
   }
 
-  detailGift(id){
-    this.productThang.detailProduct(id)
-      .subscribe((giftDetails)=>{
-        this.giftArray = giftDetails;
-      },
-      ()=>{
-        this.userGiftError = ""
+  showContributionForm(){
+    this.isShowingForm = true;
+  }
+
+  saveNewContribution(index){
+    this.newAmount =  this.giftArray[index].totalContribution+this.contributionAmount;
+    this.productThang.updateGift(this.newAmount, this.currentUser._id, this.giftArray[index]._id)
+    .subscribe(
+      (updateGiftFromApi)=>{
+         this.giftArray[index].totalContribution = this.newAmount;
+         this.porcentageOfContributions = (this.giftArray[index].totalContribution)
+         console.log(this.porcentageOfContributions)
+         console.log(this.price+"price")
+         console.log(updateGiftFromApi)
       }
     )
   }
+
+
+
+  // detailGift(id){
+  //   this.productThang.detailProduct(id)
+  //     .subscribe((giftDetails)=>{
+  //       this.giftArray = giftDetails;
+  //     },
+  //     ()=>{
+  //       this.userGiftError = ""
+  //     }
+  //   )
+  // }
 
 
 }

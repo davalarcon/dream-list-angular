@@ -94,6 +94,7 @@ export class ProductComponent implements OnInit {
           this.giftDescription='';
           this.giftImage='';
           this.saveError='';
+          this.routerThang.navigate(['/users-page'])
         },
         (err)=>{
           this.saveError="Missing Information"
@@ -112,6 +113,7 @@ export class ProductComponent implements OnInit {
         this.longDescription='';
         this.image='';
         this.saveError='';
+        this.routerThang.navigate(['/users-page'])
       },
       (err)=>{
         this.saveError="Missing Information"

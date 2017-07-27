@@ -69,6 +69,22 @@ export class ProductService {
       .map(res=>res.json());
   }
 
+  updateGift(newAmount, userId, productId){
+    return this.httpThang
+    .patch(
+      environment.apiBase+'/api/products/'+productId+'/update',
+      {
+        newTotal: newAmount,
+        
+      },
+      (result) => {
+        result => result.json();
+      }
+
+    )
+  }
+
+
   detailProduct(id){
     return this.httpThang
     .get(
