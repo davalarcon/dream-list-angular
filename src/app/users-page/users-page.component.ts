@@ -3,6 +3,7 @@ import { Router } from '@angular/router'; //to redirect once we are sign up
 import { ProductService } from '../services/product.service';
 import { AuthService } from '../services/auth.service';
 import { LoginSignupService } from '../services/login-signup.service';
+import { FeedComponent} from '../feed/feed.component';
 
 @Component({
   selector: 'app-users-page',
@@ -15,6 +16,12 @@ export class UsersPageComponent implements OnInit {
   giftArray: any[] = [];
 
   userGiftError: string;
+
+  porcentageOfContributions: any = [];
+
+  contributionAmount: number;
+
+  price: number;
 
   constructor(
     private routerThang: Router, //to redirect once we are sign up
@@ -34,6 +41,15 @@ export class UsersPageComponent implements OnInit {
     this.productThang.usersProducts()
       .subscribe((usersGifts)=>{
         this.giftArray = usersGifts;
+
+        this.giftArray.forEach((gift, i) =>{
+          this.porcentageOfContributions[i] = (gift.totalContribution / gift.price) * 100;
+          let cow = this.porcentageOfContributions[i];
+
+
+        });
+
+
       },
       ()=>{
         this.userGiftError = " Sorry, not gifts selected...yet 😉"
@@ -44,7 +60,12 @@ export class UsersPageComponent implements OnInit {
 
   }
 
-
+  deleteItem(productId) {
+    this.productThang.deleteProduct(productId)
+      .subscribe(() => {
+        console.log("Deleted");
+      });
+}
 
 
 }

@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-7 gifts selected">
 
-        <div *ngFor="let oneGift of giftArray" id="resultsSection" class="container marketing" >
+        <div *ngFor="let oneGift of giftArray, let i = index" id="resultsSection" class="container marketing" >
 
           <hr class="featurette-divider">
 
@@ -29,9 +29,10 @@
                 <h2 class="featurette heading">Price: ${{oneGift.price}}</h2>
                 <!-- <p class="lead">Sku: {{oneGift.sku}}</p> -->
                 <p class="lead">Decription: {{oneGift.description}}</p>
-                <h3>contributions:</h3>
+                <h3>Contributions: ${{oneGift.totalContribution}}.00</h3>
+                <h3>Left to raise: ${{oneGift.price-oneGift.totalContribution}}</h3>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: porcentageOfContributions[i] + '%'}">
                       <span class="sr-only">60% Complete</span>
                     </div>
                   </div>

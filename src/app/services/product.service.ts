@@ -75,7 +75,7 @@ export class ProductService {
       environment.apiBase+'/api/products/'+productId+'/update',
       {
         newTotal: newAmount,
-        
+
       },
       (result) => {
         result => result.json();
@@ -85,10 +85,10 @@ export class ProductService {
   }
 
 
-  detailProduct(id){
+  deleteProduct(productId){
     return this.httpThang
     .get(
-      environment.apiBase+'/api/products/details/'+ id,
+      environment.apiBase+'/api/products/'+productId+'/details/',
       {withCredentials: true}
     )
     .map(res=>res.json());

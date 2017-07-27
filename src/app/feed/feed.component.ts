@@ -27,7 +27,7 @@ export class FeedComponent implements OnInit {
 
   newAmount: number;
 
-  porcentageOfContributions: number;
+  porcentageOfContributions: any = [];
 
   constructor(
     private routerThang: Router, //to redirect once we are sign up
@@ -47,13 +47,20 @@ export class FeedComponent implements OnInit {
     this.productThang.feedProducts()
       .subscribe((usersGifts)=>{
         this.giftArray = usersGifts;
+
+        this.giftArray.forEach((gift, i) =>{
+          this.porcentageOfContributions[i] = (gift.totalContribution / gift.price) * 100;
+          let cow = this.porcentageOfContributions[i];
+        
+
+        });
         console.log(this.ownerId.firstName)
       },
       ()=>{
         this.userGiftError = " Sorry, not gifts selected...yet 😉"
       }
     )
-    
+
 
 
   }
@@ -68,7 +75,7 @@ export class FeedComponent implements OnInit {
     .subscribe(
       (updateGiftFromApi)=>{
          this.giftArray[index].totalContribution = this.newAmount;
-         this.porcentageOfContributions = (this.giftArray[index].totalContribution)
+         this.porcentageOfContributions[index] = ( this.giftArray[index].totalContribution / this.giftArray[index].price * 100)
          console.log(this.porcentageOfContributions)
          console.log(this.price+"price")
          console.log(updateGiftFromApi)
