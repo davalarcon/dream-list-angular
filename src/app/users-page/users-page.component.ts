@@ -5,6 +5,8 @@ import { AuthService } from '../services/auth.service';
 import { LoginSignupService } from '../services/login-signup.service';
 import { FeedComponent} from '../feed/feed.component';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-users-page',
   templateUrl: './users-page.component.html',
@@ -63,9 +65,14 @@ export class UsersPageComponent implements OnInit {
   deleteItem(productId) {
     this.productThang.deleteProduct(productId)
       .subscribe(() => {
+        window.location.replace(environment.apiBase+'/users-page')
         console.log("Deleted");
+
       });
 }
+
+
+
 
 
 }

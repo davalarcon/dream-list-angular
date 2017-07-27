@@ -5,6 +5,8 @@ import { ProductService } from '../services/product.service';
 import { AuthService } from '../services/auth.service';
 import { LoginSignupService } from '../services/login-signup.service';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -113,7 +115,7 @@ export class ProductComponent implements OnInit {
         this.longDescription='';
         this.image='';
         this.saveError='';
-        this.routerThang.navigate(['/users-page'])
+        window.location.replace(environment.apiBase+'/users-page')
       },
       (err)=>{
         this.saveError="Missing Information"

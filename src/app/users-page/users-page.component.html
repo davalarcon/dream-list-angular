@@ -13,7 +13,8 @@
             <h3>Hello, {{currentUser.firstName}} {{currentUser.lastName}}!</h3>
             <h4>Birthday:{{currentUser.birthday}}</h4>
             <p>Email:{{currentUser.email}}</p>
-            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            <p>Id: {{currentUser._id}}</p>
+            <p><a href="#" class="btn btn-primary" role="button">Update</a> 
           </div>
         </div>
       </div>
@@ -37,7 +38,7 @@
                     </div>
                   </div>
 
-                  <button type="button" class="btn btn-danger" (click)='deleteItem(oneGift._id)'>Danger</button>
+                  <button type="button" class="btn btn-danger" (click)='deleteItem(oneGift._id)'>Delete Item</button>
 
               </div>
               <div class="col-md-5">

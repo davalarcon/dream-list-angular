@@ -4,6 +4,8 @@ import { ProductService } from '../services/product.service';
 import { AuthService } from '../services/auth.service';
 import { LoginSignupService } from '../services/login-signup.service';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -51,7 +53,7 @@ export class FeedComponent implements OnInit {
         this.giftArray.forEach((gift, i) =>{
           this.porcentageOfContributions[i] = (gift.totalContribution / gift.price) * 100;
           let cow = this.porcentageOfContributions[i];
-        
+
 
         });
         console.log(this.ownerId.firstName)
@@ -66,7 +68,8 @@ export class FeedComponent implements OnInit {
   }
 
   showContributionForm(){
-    this.isShowingForm = true;
+      this.isShowingForm = true;
+
   }
 
   saveNewContribution(index){
@@ -75,26 +78,17 @@ export class FeedComponent implements OnInit {
     .subscribe(
       (updateGiftFromApi)=>{
          this.giftArray[index].totalContribution = this.newAmount;
-         this.porcentageOfContributions[index] = ( this.giftArray[index].totalContribution / this.giftArray[index].price * 100)
+         this.porcentageOfContributions[index] =
+              ( this.giftArray[index].totalContribution / this.giftArray[index].price * 100)
+          this.isShowingForm = false;
+        //  window.location.replace(environment.apiBase+'/logout')
          console.log(this.porcentageOfContributions)
-         console.log(this.price+"price")
+
          console.log(updateGiftFromApi)
       }
     )
   }
 
-
-
-  // detailGift(id){
-  //   this.productThang.detailProduct(id)
-  //     .subscribe((giftDetails)=>{
-  //       this.giftArray = giftDetails;
-  //     },
-  //     ()=>{
-  //       this.userGiftError = ""
-  //     }
-  //   )
-  // }
 
 
 }
