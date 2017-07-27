@@ -53,10 +53,29 @@ export class ProductService {
     console.log('Im in usersProducts')
     return this.httpThang
       .get(
+        environment.apiBase + '/api/products/user',
+        { withCredentials: true }
+      )
+      .map(res=>res.json());
+  }
+
+  feedProducts(){
+    console.log('Im in usersProducts')
+    return this.httpThang
+      .get(
         environment.apiBase + '/api/products',
         { withCredentials: true }
       )
       .map(res=>res.json());
+  }
+
+  detailProduct(id){
+    return this.httpThang
+    .get(
+      environment.apiBase+'/api/products/details/'+ id,
+      {withCredentials: true}
+    )
+    .map(res=>res.json());
   }
 
 }

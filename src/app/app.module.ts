@@ -19,6 +19,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsersPageComponent } from './users-page/users-page.component';
+import { FeedComponent } from './feed/feed.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UsersPageComponent } from './users-page/users-page.component';
     ProductListComponent,
     CoverComponent,
     NavbarComponent,
-    UsersPageComponent
+    UsersPageComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

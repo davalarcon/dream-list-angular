@@ -9,7 +9,7 @@
       <div class="carousel-caption mainTitle">
 
       </div>
-  
+
 
   </div>
 
@@ -42,7 +42,8 @@
   </div>
 
 
-    <form class="form-horizontal" (ngSubmit)='fetchList()'>
+
+    <form class="form-horizontal" (ngSubmit)='fetchList(searchWord)'>
   <div class="form-group form-group-lg">
     <label class="col-sm-2 control-label" id="search" for="formGroupInputLarge">Search:</label>
     <div class="col-sm-8">
@@ -139,8 +140,8 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette heading">{{product.name}}</h2>
+          <h2 class="featurette heading">Price: ${{product.salePrice}}</h2>
           <p class="lead">Sku: {{product.sku}}</p>
-          <p class="lead">Price: {{product.salePrice}}</p>
           <p class="lead">Decription: {{product.longDescription}}</p>
         </div>
         <div class="col-md-5">

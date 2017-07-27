@@ -8,10 +8,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CoverComponent } from './cover/cover.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsersPageComponent } from './users-page/users-page.component';
+import { FeedComponent } from './feed/feed.component';
+
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomePageComponent
   },
   {
@@ -37,6 +39,10 @@ const routes: Routes = [
   {
     path: 'users-page',
     component: UsersPageComponent
+  },
+  {
+    path: 'feed',
+    component: FeedComponent
   }
 ];
 

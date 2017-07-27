@@ -25,14 +25,14 @@ export class NavbarComponent implements OnInit {
       this.currentUser = userFromApi;
     })
     .catch(()=>{
-      this.routerThang.navigate(['/home'])
+      this.routerThang.navigate(['/'])
     })
   }
 
   logMeOutPls(){
       this.authThang.logout()
       .then((resultFromApi)=>{
-        this.routerThang.navigate(['/home'])
+        this.routerThang.navigate(['/'])
       })
       .catch(()=>{
         this.logoutError = 'Log out went 👎'

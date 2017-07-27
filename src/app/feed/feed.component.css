@@ -4,25 +4,15 @@
   position: absolute;
 }
 
-/*.thumbnail{
+.thumbnail{
   height: 630px;
-}*/
+}
 .title{
   margin-top: 50px;
 }
 .backgroundImage{
   height: 1300px;
 }
-
 .mainImage{
-  margin-top: 150px;
+  margin-top: 50px;
 }
-
-.center-block{
-  height: 150px;
-}
-
-
-/*.profileBackground{
-
-}*/

@@ -1,0 +1,25 @@
+
+
+<div class="carousel-inner mainImage" role="listbox">
+
+<div class="container">
+
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4" *ngFor="let oneGift of giftArray">
+        <div class="thumbnail">
+          <img [src]="oneGift.image" alt="...">
+          <div class="caption">
+            <h3>{{oneGift.name}}</h3>
+            <h3>${{oneGift.price}}</h3>
+            <p>{{oneGift.description}}</p>
+            <p><a href="#" class="btn btn-primary" (click)=detailGift(oneGift._id) role="button">Details</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <img class="backgroundImage" src="assets/images/background.jpg" alt="...">
+
+</div>

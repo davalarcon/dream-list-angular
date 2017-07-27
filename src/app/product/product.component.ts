@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
 
   name: string;
   sku: number;
-  price: number;
+  salePrice: number;
   longDescription: string;
   image: string;
 
@@ -102,13 +102,13 @@ export class ProductComponent implements OnInit {
   }
 
   addProduct(someProduct){
-    this.productThang.giftFromBB(someProduct.name, someProduct.sku, someProduct.price, someProduct.longDescription, someProduct.image)
+    this.productThang.giftFromBB(someProduct.name, someProduct.sku, someProduct.salePrice, someProduct.longDescription, someProduct.image)
     .subscribe(
       (newGiftFromApi)=>{
         this.giftArray.push(newGiftFromApi);
         this.name= '';
         this.sku= undefined;
-        this.price= undefined;
+        this.salePrice= undefined;
         this.longDescription='';
         this.image='';
         this.saveError='';

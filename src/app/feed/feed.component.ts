@@ -5,11 +5,11 @@ import { AuthService } from '../services/auth.service';
 import { LoginSignupService } from '../services/login-signup.service';
 
 @Component({
-  selector: 'app-users-page',
-  templateUrl: './users-page.component.html',
-  styleUrls: ['./users-page.component.css']
+  selector: 'app-feed',
+  templateUrl: './feed.component.html',
+  styleUrls: ['./feed.component.css']
 })
-export class UsersPageComponent implements OnInit {
+export class FeedComponent implements OnInit {
 
   currentUser : any = {};
   giftArray: any[] = [];
@@ -30,7 +30,7 @@ export class UsersPageComponent implements OnInit {
     .catch(()=>{
       this.routerThang.navigate(['/login-signup'])
     })
-    this.productThang.usersProducts()
+    this.productThang.feedProducts()
       .subscribe((usersGifts)=>{
         this.giftArray = usersGifts;
       },
@@ -40,7 +40,16 @@ export class UsersPageComponent implements OnInit {
     )
   }
 
+  detailGift(id){
+    this.productThang.detailProduct(id)
+      .subscribe((giftDetails)=>{
+        this.giftArray = giftDetails;
+      },
+      ()=>{
+        this.userGiftError = ""
+      }
+    )
+  }
 
-  
 
 }
