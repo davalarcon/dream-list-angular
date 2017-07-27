@@ -10,7 +10,7 @@ export class WalmartApiService {
 
   // baseUrl = 'http://api.walmartlabs.com/v1/search?query='
   baseUrl = 'https://api.bestbuy.com/v1/products((search='
-  keyUrl = ')&(categoryPath.id=abcat0101000))?apiKey=BTcKh5HDYbNCenSDKoaeGrGW&sort=salePrice.dsc&show=name,sku,image,longDescription,salePrice&facet=bestSellingRank&pageSize=30&format=json'
+  keyUrl = '))?apiKey=BTcKh5HDYbNCenSDKoaeGrGW&sort=salePrice.dsc&show=name,sku,image,longDescription,salePrice&facet=bestSellingRank&pageSize=30&format=json'
   // keyUrl = '&format=json&apiKey=vzfjh6twt9rnwhg9hh4x265x'
   // keyUrl = '.json?apiKey=BTcKh5HDYbNCenSDKoaeGrGW'
 

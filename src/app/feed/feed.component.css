@@ -1,8 +1,8 @@
-.row{
+/*.row{
   margin-top: 20px;
   margin-right: 10%;
   position: absolute;
-}
+}*/
 
 .thumbnail{
   height: 630px;
@@ -10,9 +10,19 @@
 .title{
   margin-top: 50px;
 }
-.backgroundImage{
+/*.backgroundImage{
   height: 1300px;
-}
+}*/
 .mainImage{
   margin-top: 50px;
+}
+
+.featurette-divider{
+  border-top: 2px solid black;
+
+}
+
+.bottom{
+  height: 500px;
+
 }

@@ -1,4 +1,4 @@
-
+<!--
 
 <div class="carousel-inner mainImage" role="listbox">
 
@@ -22,4 +22,33 @@
 
     <img class="backgroundImage" src="assets/images/background.jpg" alt="...">
 
-</div>
+</div> -->
+
+
+<section class="bottom">
+  <div *ngFor="let oneGift of giftArray" id="resultsSection" class="container marketing" >
+
+    <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette heading">{{oneGift.name}}</h2>
+          <h2 class="featurette heading">Price: ${{oneGift.price}}</h2>
+          <p class="lead">Sku: {{oneGift.sku}}</p>
+          <p class="lead">Decription: {{oneGift.description}}</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="{{oneGift.image}}"  alt="" data-holder-rendered="true">
+        </div>
+
+      <!-- <div class="col-sm-5"> -->
+
+        <!-- <button type="button" class="btn btn-primary btn-lg btn-block dreamList" (click)='addProduct(product)'>ADD TO MY <img class="imgButton" src="assets/images/dream_logo_crop.png" alt="..."/></button> -->
+      <!-- </div> -->
+
+
+      </div>
+  </div>
+    <hr class="featurette-divider">
+
+</section>
