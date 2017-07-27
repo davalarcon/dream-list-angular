@@ -88,7 +88,7 @@ export class ProductService {
   deleteProduct(productId){
     return this.httpThang
     .get(
-      environment.apiBase+'/api/products/'+productId+'/details/',
+      environment.apiBase+'/api/products/'+productId+'/delete',
       {withCredentials: true}
     )
     .map(res=>res.json());
