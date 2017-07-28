@@ -40,7 +40,7 @@
 
           <h2 class="featurette heading">{{oneGift.name}}</h2>
           <h2 class="featurette heading">Price: ${{oneGift.price}}</h2>
-          <p class="lead">Sku: {{oneGift.sku}}</p>
+          <!-- <p class="lead">Sku: {{oneGift.sku}}</p> -->
           <p class="lead">Decription: {{oneGift.description}}</p>
           <h3>contributions: ${{oneGift.totalContribution}}</h3>
           <h3>to reach goal: ${{oneGift.price-oneGift.totalContribution}}</h3>
@@ -55,9 +55,9 @@
 
             <div *ngIf='isShowingForm' >
 
-              <form (ngSubmit)='saveNewContribution(i)'>
+              <form (ngSubmit)='saveNewContribution(i)' class="creditForm">
                 <div class="form-group">
-                  <img class="creditCards" src="assets/images/cards.jpg" alt="">
+                    <img class="creditCards" src="assets/images/cards.jpg" alt="">
                 </div>
                   <div class="form-group">
                     <label for="credit-card-number-input">Credit Card Number</label>
@@ -71,7 +71,7 @@
                   </div>
 
 
-                  <button type="submit" class="btn btn-default" (click)='showContributionForm()'>Submit</button>
+                  <button type="submit" class="btn btn-success" (click)='showContributionForm()'>Submit Payment</button>
                   </form>
 
             </div>

@@ -30,8 +30,14 @@
   background-color: #d9edf7;
 }
 .form-control{
-  width: 50%
+  width: 90%
 }
 .creditCards{
   height: 83px;
+}
+.creditForm{
+  border: solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
 }
