@@ -29,3 +29,9 @@
 .progress{
   background-color: #d9edf7;
 }
+.form-control{
+  width: 50%
+}
+.creditCards{
+  height: 83px;
+}

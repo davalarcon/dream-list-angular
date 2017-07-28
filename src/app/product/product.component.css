@@ -119,4 +119,9 @@ h3{
 }
 .backButton{
   padding: 10px;
+    background-color: rgba(248,248,248, 0.8);
+}
+.bestbuy{
+  height: 70px;
+  margin-left: -25px;
 }

@@ -46,13 +46,16 @@
     <form class="form-horizontal" (ngSubmit)='fetchList(searchWord)'>
   <div class="form-group form-group-lg">
     <label class="col-sm-2 control-label" id="search" for="formGroupInputLarge">Search:</label>
-    <div class="col-sm-8">
+    <div class="col-sm-7">
       <input class="form-control" type="text" id="formGroupInputLarge" placeholder="What is your dream gift?"
               [(ngModel)]='searchWord' name="searchWord">
 
     </div>
     <div class="col-sm-2">
         <button type="button" class="btn btn-info" onClick="document.getElementById('resultsSection').scrollIntoView('resultsSection')" (click)='fetchList(searchWord)'>find it</button>
+    </div>
+    <div class="col-sm-1">
+      <img class="bestbuy" src="assets/images/best-buy.png" alt="">
     </div>
   </div>
 
