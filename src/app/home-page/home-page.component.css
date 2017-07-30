@@ -1,5 +1,5 @@
 .mainImage{
-  height: 750px;
+  height: 560px;
   /*position: absolute;*/
 }
 
@@ -67,4 +67,78 @@ hr{
 }
 .down{
   top: 50%;
+}
+
+@media (max-width: 376px){
+          .mainImage{
+            height: 550px;
+            /*position: absolute;*/
+          }
+
+          h1{
+            font-size: 150px;
+            top: 10%;
+            font-family: CenturyGothic;
+            color: black;
+            /*background-color: rgba(248,248,248, 1);*/
+            border-radius: 10px;
+          }
+          p{
+            font-size: 30px;
+            /*background-color: rgba(248,248,248, 1);*/
+            border-radius: 10px;
+            color: black;
+            font-family: CenturyGothic;
+          }
+
+          .marketing{
+            margin-bottom: 20px;
+          }
+
+          .carousel-caption{
+            top:20%
+          }
+
+          hr{
+            border-top: 1px solid black;
+          }
+          .mainTitle{
+            top: 10%;
+          }
+          .center-block{
+            border-radius: 10px;
+          }
+
+          .carousel-inner{
+            /*height: 700px;*/
+          }
+
+          .container-fluid{
+            /*height: 350px;
+            border: solid black;*/
+            /*object-fit: scale-down;*/
+          }
+
+          .how{
+            height: 700px;
+          }
+          .col-sm-4{
+            height: 300px;
+            border: solid black;
+          }
+          .top{
+            height: 700px;
+          }
+          .firstImage{
+            padding-top: 30px;
+            margin-left: -18px;
+            height: 854px;
+          }
+          .down{
+            top: 50%;
+          }
+          .mainlogo{
+            height: 270px;
+            margin-left: -80px;
+          }
 }
