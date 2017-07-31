@@ -44,3 +44,55 @@ h3{
   color: crimson;
   margin: 0 15px 15px 15px;
 }
+
+@media (max-width: 376px){
+
+        .firstImage{
+          padding-top: 30px;
+          margin-left: -18px;
+          /*height: 1000px;*/
+          position: absolute;
+          z-index: -1;
+          width: 378px;
+        }
+
+        .top{
+          height: 920px;
+        }
+
+        .form-horizontal{
+          margin-top: 100px;
+          width: 350px;
+          background-color: rgba(248,248,248, 0.8);
+          border-radius: 10px;
+          margin-left: -1px;
+          /*border: solid black;*/
+
+        }
+
+        .form-group{
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+
+        .signin{
+          padding-bottom: 20px;
+        }
+
+        .signup{
+          margin-top: 50px;
+        }
+
+        h3{
+          padding: 10px 0 0 10px;
+        }
+        .error{
+          padding: 15px;
+          border: 2px solid crimson;
+          border-radius: 5px;
+          color: crimson;
+          margin: 0 15px 15px 15px;
+        }
+
+}

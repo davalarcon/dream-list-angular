@@ -125,3 +125,150 @@ h3{
   height: 70px;
   margin-left: -25px;
 }
+
+@media (max-width: 376px){
+
+
+          .mainImage{
+            height: 850px;
+            position: absolute;
+            z-index: -1;
+          }
+          body{
+            height: 850px;
+          }
+          .greeting{
+            font-size: 40px;
+            font-family: helvetica;
+            color: honeydew;
+          }
+          .btn-info{
+            height: 60px;
+            width: 150px;
+            font-size: 35px;
+            margin-top: 45px;
+          }
+          .btn-lg{
+            padding: 0px;
+          }
+          .buttons{
+            height: 50px;
+            padding-top: 50px;
+          }
+          .btn-block{
+            font-size: 30px;
+          }
+          .firstImage{
+            padding-top: 30px;
+            margin-left: -18px;
+            height: 1px;
+            position: absolute;
+            z-index: -1;
+          }
+          .secondImage{
+            padding-top: 30px;
+            margin-left: -18px;
+            height: 1px;
+            position: absolute;
+            z-index: -1;
+          }
+
+          .featurette-divider{
+            border-top: 2px solid black;
+          }
+
+          .top{
+            height: 1000px;
+          }
+
+          .form-horizontal{
+            margin-top: 260px;
+            height: 130px;
+            padding: 5px;
+            background-color: rgba(248,248,248, 0.8);
+            border-radius: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+
+          .createGift{
+            margin-top: 50px;
+            height: 630px;
+            padding: 5px;
+            background-color: rgba(248,248,248, 0.8);
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .productResults{
+            border: solid black;
+          }
+          .productTitle{
+            font-size: 20px;
+          }
+          h3{
+            padding: 10px 0 0 10px;
+          }
+          .error{
+            padding: 15px;
+            border: 2px solid crimson;
+            border-radius: 5px;
+            color: crimson;
+            margin: 0 15px 15px 15px;
+          }
+
+          #formGroupInputLarge{
+            height: 55px;
+            font-size: 26px;
+          }
+
+          #search{
+            font-size: 20px;
+          }
+
+
+          .dreamList{
+            font-size: 50px;
+          }
+          .createDreamList{
+            font-size: 35px;
+            width: 300px;
+            margin-left: -10px;
+            margin-top: 1px;
+            height: 80px
+          }
+          .imgButton{
+            height: 80px;
+          }
+          #resultsSection{
+
+          }
+          .bottom{
+            height: 500px;
+          }
+          .backButtonDiv{
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+          .backButton{
+            padding: 0px;
+            font-size: 0px;
+              background-color: rgba(248,248,248, 0.8);
+          }
+          .bestbuy{
+            height: 70px;
+            margin-left: -25px;
+          }
+          .findItbutton{
+            padding-left: 100px;
+            margin-top: 10px;
+          }
+          .bestbuylogo{
+            margin-left: 135px;
+            margin-top: 10px;
+          }
+          .helloDavid{
+            margin-top: 30px;
+          }
+}

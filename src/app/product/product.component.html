@@ -19,7 +19,7 @@
   <div class=col-sm-2>
 
   </div>
-  <div class="col-sm-8">
+  <div class="col-sm-8 helloDavid">
       <p class="greeting">Hello, {{currentUser.firstName}}!</p>
       <a type="button" class="btn btn-success btn-lg btn-block" onClick="document.getElementById('searchSection').scrollIntoView('searchSection')">Search for your Gift</a>
 
@@ -51,10 +51,10 @@
               [(ngModel)]='searchWord' name="searchWord">
 
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 findItbutton">
         <button type="button" class="btn btn-info" onClick="document.getElementById('resultsSection').scrollIntoView('resultsSection')" (click)='fetchList(searchWord)'>find it</button>
     </div>
-    <div class="col-sm-1">
+    <div class="col-sm-1 bestbuylogo">
       <img class="bestbuy" src="assets/images/best-buy.png" alt="">
     </div>
   </div>
