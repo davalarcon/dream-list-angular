@@ -45,3 +45,56 @@ hr{
 .progress{
   background-color: #d9edf7;
 }
+
+@media (max-width: 376px){
+
+        .row{
+          margin-top: 20px;
+          margin-right: 10%;
+          width: 1000px;
+          margin-left: -70px;
+          /*position: absolute;*/
+        }
+
+        /*.thumbnail{
+          height: 630px;
+        }*/
+        .title{
+          margin-top: 50px;
+        }
+        .backgroundImage{
+          height: 1300px;
+        }
+
+        .mainImage{
+          margin-top: 55px;
+          height: 4000px
+        }
+
+        .center-block{
+          height: 150px;
+        }
+
+        .profile{
+          margin-top: 0px;
+        }
+
+        .selected{
+          margin-top: 50px;
+          height: 300px;
+
+        }
+
+        hr{
+          border-top: 1px solid black;
+        }
+
+        .col-md-7{
+          padding-left: 50px;
+        }
+        .progress{
+          background-color: #d9edf7;
+        }
+
+
+}

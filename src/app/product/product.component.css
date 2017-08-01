@@ -178,7 +178,7 @@ h3{
           }
 
           .top{
-            height: 1000px;
+            height: 800px;
           }
 
           .form-horizontal{
@@ -228,7 +228,7 @@ h3{
 
 
           .dreamList{
-            font-size: 50px;
+            font-size: 30px;
           }
           .createDreamList{
             font-size: 35px;
@@ -238,13 +238,13 @@ h3{
             height: 80px
           }
           .imgButton{
-            height: 80px;
+            height: 60px;
           }
           #resultsSection{
 
           }
           .bottom{
-            height: 500px;
+            height: 5px;
           }
           .backButtonDiv{
             position: absolute;
@@ -270,5 +270,11 @@ h3{
           }
           .helloDavid{
             margin-top: 30px;
+          }
+          .topdown{
+            height: 700px;
+          }
+          .caption{
+            padding-left: 60px;
           }
 }

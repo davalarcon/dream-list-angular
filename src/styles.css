@@ -7,3 +7,9 @@ body{
   background-color: gray;
   margin-top: -50;
 }
+
+@media (max-width: 376px){
+  .caption{
+    padding-left: 60px!important;
+  }
+}
