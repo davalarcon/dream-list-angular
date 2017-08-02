@@ -51,8 +51,8 @@ hr{
         .row{
           margin-top: 20px;
           margin-right: 10%;
-          width: 1000px;
-          margin-left: -70px;
+          width: 429px;
+          margin-left: -55px;
           /*position: absolute;*/
         }
 
@@ -95,6 +95,9 @@ hr{
         .progress{
           background-color: #d9edf7;
         }
-
+        .profilePic{
+          height: 270px;
+          margin-left: 0;
+        }
 
 }
